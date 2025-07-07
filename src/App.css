@@ -525,26 +525,47 @@ input:focus, button:focus {
     min-width: 0 !important;
   }
   .split-hero-image {
-    min-width: 0 !important;
+    width: 100vw !important;
+    height: auto !important;
     min-height: 120px !important;
-    width: 100% !important;
-    height: 180px !important;
-    position: relative !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    overflow: hidden !important;
   }
   .split-hero-image img {
-    max-width: 100% !important;
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
+    max-width: 100vw !important;
     min-width: 0 !important;
     min-height: 0 !important;
     object-fit: cover !important;
     border-radius: 12px !important;
-    z-index: 1 !important;
     display: block !important;
     background: #e0e0e0 !important;
+  }
+  .auth-main {
+    min-height: 100vh !important;
+    width: 100vw !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .auth-form-container {
+    width: 90vw !important;
+    max-width: 380px !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    padding: 18px 8px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 }
 
@@ -776,3 +797,51 @@ body, html, #root {
 .watermark {
   z-index: 10 !important;
 }
+
+/* --- EXTRA MOBILE FIXES FOR IMAGE RESPONSIVENESS AND LOGIN CENTERING --- */
+@media (max-width: 600px) {
+  .split-hero-image {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 120px !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+  .split-hero-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    display: block !important;
+    background: #e0e0e0 !important;
+  }
+  .auth-main {
+    min-height: 100vh !important;
+    width: 100vw !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .auth-form-container {
+    width: 90vw !important;
+    max-width: 380px !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    padding: 18px 8px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+/* --- END EXTRA MOBILE FIXES --- */
