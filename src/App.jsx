@@ -177,8 +177,8 @@ function LandingPage({ onLogin, darkMode, toggleDarkMode }) {
           <p style={{ fontSize: '1.2em', margin: '16px 0 24px 0', color: 'var(--text-color)', opacity: 0.95 }}>We provide best healthcare</p>
           <RippleButton className="modern-btn" onClick={onLogin}>Login</RippleButton>
         </div>
-        <div className="split-hero-image" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', minWidth: 340, minHeight: 220 }}>
-          <img src="/hero-bg.jpg" alt="Hero BG" style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%', objectFit: 'cover', borderRadius: 18, zIndex: 0 }} />
+        <div className="split-hero-image">
+          <img src={`${import.meta.env.BASE_URL}hero-bg.jpg`} alt="Hero BG" style={{ background: '#e0e0e0' }} />
           <MedicalHeroSVG />
         </div>
       </section>
@@ -268,7 +268,7 @@ function LoginModal({ showSignUp, setShowSignUp, error, loading, handleSignUp, h
           </div>
         </div>
       </div>
-      <div style={{ flex: 1, background: `url('/login-bg.jpg') no-repeat center center/cover`, borderRadius: 18, minWidth: 320, maxWidth: 520, display: 'none' }} />
+      <div className="login-bg-image" style={{ background: `url(${import.meta.env.BASE_URL}login-bg.jpg) no-repeat center center/cover` }} />
     </div>
   );
 }
@@ -294,8 +294,8 @@ function DashboardPage({ user, handleLogout, fileInputRef, handleFileChange, fil
             Logout
           </RippleButton>
         </div>
-        <div className="split-hero-image" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', minWidth: 340, minHeight: 220 }}>
-          <img src="/hero-bg.jpg" alt="Hero BG" style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%', objectFit: 'cover', borderRadius: 18, zIndex: 0 }} />
+        <div className="split-hero-image">
+          <img src={`${import.meta.env.BASE_URL}hero-bg.jpg`} alt="Hero BG" style={{ background: '#e0e0e0' }} />
           <MedicalHeroSVG />
         </div>
       </section>
